@@ -1,0 +1,43 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui;
+  
+  --color-pulse-red: #dc2626;
+  --color-pulse-rose: #f43f5e;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased selection:bg-red-500/30;
+    background: radial-gradient(circle at center, #0f172a 0%, #020617 100%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom Glassmorphism Utility */
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.glass-dark {
+  @apply bg-black/40 backdrop-blur-xl border border-white/5;
+}
+
+.glow-red {
+  box-shadow: 0 0 20px rgba(220, 38, 38, 0.4);
+}
+
+.glow-red-hover:hover {
+  box-shadow: 0 0 30px rgba(220, 38, 38, 0.6);
+}
+
+/* Hide scrollbar but keep functionality */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
